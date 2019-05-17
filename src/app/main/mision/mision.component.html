@@ -1,0 +1,67 @@
+<menu-nav></menu-nav>
+<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <img src="\assets\imagenes\Logo COPRISED 2017 Horizontal.png"  class="imagen img-fluid" alt="Responsive image">
+</div>
+<div clase="mision">
+    <button type="button" mdbBtn class="button" color="default" block="true" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+    mdbWavesEffect>MISION</button>
+    <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead text-center">MISION & VISION</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                      </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-book fa-4x mb-3 animated rotateIn"> Misión</i>
+                        <p class="text-justify">Proteger a la población contra riesgos sanitarios a la salud provocados 
+                            por el uso y consumo de bienes y servicios, insumos para la salud, así como por su exposición 
+                            a factores ambientales y laborales, la ocurrencia de emergencias sanitarias y la prestación de 
+                            servicios de salud, mediante la regulación, control, fomento y prevención de riesgos sanitarios</p>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</div>
+
+<!-- Vision -->
+<div class="vision">
+    <button type="button" mdbBtn class="button" color="default" block="true" rounded="true" data-toggle="vision" data-target="#frameModalTop2" (click)="frame2.show()"
+    mdbWavesEffect>VISION</button>
+    <div mdbModal #frame2="mdbModal" class="modal fade top vision" id="frameModalTop2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead text-center">MISION & VISION</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                      </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-eye fa-4x mb-3 animated rotateIn"> Vision</i>
+                        <p class="text-justify">Lograr una sociedad sana, sabiendo que definimos y efectuamos intervenciones 
+                            eficaces para proteger su salud. Coadyuvar y mejorar la competitividad de las empresas y su desarrollo 
+                            económico en nuestro Estado.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</div>	

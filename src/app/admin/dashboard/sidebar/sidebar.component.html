@@ -1,0 +1,26 @@
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li><a routerLinkActive="active current" routerLink="/admin/dashboard/administracion" mdbWavesEffect>Administracion</a></li>
+      <li><a routerLinkActive="active current" routerLink="/admin/dashboard/usuarios" mdbWavesEffect>Usuarios</a></li>
+      <li><a routerLinkActive="active current" routerLink="/admin/dashboard/analisis" mdbWavesEffect>Analisis</a></li>
+      <hr>
+    </ul>  
+  </div>
+
+  <!-- Page content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+             <section class="container-fluid">
+               <router-outlet></router-outlet>
+             </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

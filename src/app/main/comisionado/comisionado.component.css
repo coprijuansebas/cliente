@@ -1,0 +1,33 @@
+.img-circle
+{
+    width: 100%;
+    height: auto;
+}
+
+img
+{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.text-center
+{
+    text-align: center!important;
+}
+
+p
+{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.texto-encabezado {
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+*, ::after, ::before
+{
+    box-sizing: border-box;
+}
+

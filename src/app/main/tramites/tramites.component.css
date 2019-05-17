@@ -1,0 +1,108 @@
+#tramites{
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+}
+
+#texto{
+    margin-top: 8px;
+    text-align: center;
+    color: black;
+}
+
+
+
+#buscador{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#boton{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    transform: translatex(calc(-150%)); /* move left the icon's width */
+    padding: 0 7px;                     /* left and right padding     */
+}
+
+input{
+    padding-right: 2em;                 /* prevent typing over icon   */
+    padding-left: 1em;
+    width: 100%;
+}
+
+#titulo {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #707070; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    margin-top: 1.4em;
+ } 
+ 
+ #titulo span { 
+     background:#fff; 
+     padding:0 10px; 
+     color: #707070;
+ }
+
+ #titulo2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #707070; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    margin-top: 1.4em;
+ } 
+ 
+ #titulo2 span { 
+     background:#fff; 
+     padding:0 10px; 
+     color: #707070;
+ }
+
+ #titulo3 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #707070; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    margin-top: 1.4em;
+ } 
+ 
+ #titulo3 span { 
+     background:#fff; 
+     padding:0 10px; 
+     color: #707070;
+ }
+
+ #titulo4 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #707070; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    margin-top: 1.4em;
+ } 
+ 
+ #titulo4 span { 
+     background:#fff; 
+     padding:0 10px; 
+     color: #707070;
+ }
+
+ .test {
+     margin-left: 4em;
+     width: 50%;
+     height: 50%;
+     background-color: #707070;
+  }
+
+  h4{
+      text-align: center; 
+  }
+  
+  a{
+      text-align: center;
+  }
