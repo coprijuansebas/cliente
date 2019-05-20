@@ -3,8 +3,11 @@
     <img src="\assets\imagenes\Logo COPRISED 2017 Horizontal.png"  class="imagen img-fluid" alt="Responsive image">
 </div>
 <div clase="mision">
-    <button type="button" mdbBtn class="button" color="default" block="true" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+    <button type="button" mdbBtn class="button button-c"  block="true" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
     mdbWavesEffect>MISION</button>
+
+
+
     <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-notify modal-info" role="document">
@@ -35,9 +38,10 @@
 </div>
 
 <!-- Vision -->
-<div class="vision">
-    <button type="button" mdbBtn class="button" color="default" block="true" rounded="true" data-toggle="vision" data-target="#frameModalTop2" (click)="frame2.show()"
+<div class="vision justify-content-center">
+    <button type="button" mdbBtn class="button button-c "  block="true" rounded="true" data-toggle="vision" data-target="#frameModalTop2" (click)="frame2.show()"
     mdbWavesEffect>VISION</button>
+
     <div mdbModal #frame2="mdbModal" class="modal fade top vision" id="frameModalTop2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-notify modal-info" role="document">
