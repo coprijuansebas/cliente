@@ -17,6 +17,9 @@ import { TramitesComponent } from './tramites/tramites.component';
 import { TransparenciaComponent } from './transparencia/transparencia.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 
+import { TramitesService } from '../services/tramites.service';
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -38,10 +41,13 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     NgbModule.forRoot(),
-    MainRoutingModule
+    MainRoutingModule,
+    HttpClientModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [
+    TramitesService
+  ],
   bootstrap: [MainComponent]
 })
 export class MainModule { }

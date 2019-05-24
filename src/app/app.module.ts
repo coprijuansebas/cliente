@@ -8,6 +8,9 @@ import { AppRoutingModule } from  './app-routing.module';
 import { MainModule } from './main/main.module';
 import { AdminModule } from './admin/admin.module';
 
+import { HttpClientModule } from '@angular/common/http'
+import { TramitesService } from './services/tramites.service';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +22,13 @@ import { AdminModule } from './admin/admin.module';
     NgbModule.forRoot(),
     AppRoutingModule,
     AdminModule,
-    MainModule
+    MainModule,
+    HttpClientModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [
+    TramitesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

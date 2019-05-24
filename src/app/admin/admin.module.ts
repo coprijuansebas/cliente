@@ -14,6 +14,10 @@ import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 
 
+import { HttpClientModule } from '@angular/common/http'
+import { TramitesService } from '../services/tramites.service';
+
+
 @NgModule({
   declarations: [
     AdminComponent,
@@ -29,10 +33,13 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     NgbModule.forRoot(),
-    AdminRoutingModule
+    AdminRoutingModule,
+    HttpClientModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [
+    TramitesService
+  ],
   bootstrap: [AdminComponent]
 })
 export class AdminModule { }
