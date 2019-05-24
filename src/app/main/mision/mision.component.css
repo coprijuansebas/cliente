@@ -14,10 +14,12 @@
 .button-c{
   height: 50px;
   background-color: rgb(250,204,165);
-  border-radius: 23px;
+  border-radius: 10px;
   width: 50%;
   display:block;
   margin-left: auto;
   margin-right: auto;
 }
-
+.space{
+  padding-bottom: 10px;
+}
