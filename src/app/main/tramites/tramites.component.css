@@ -79,13 +79,18 @@ hr{
 }
 
 .size{
-    width: 85%;
+    width: 95%;
     margin-bottom: 10px;
 }
 .font{
     font-size: 15px;
     text-align: justify;
 }
+.font-c{
+    font-size: 20px;
+    text-align: justify;
+}
+
 
 .list{
     text-align: center;
@@ -106,3 +111,9 @@ hr{
     font-size: 20px;
     font-weight: 1000;
 }
+
+.font-ti{
+    font-size: 20px;
+    font-weight: 1000;
+}
+
