@@ -17,7 +17,7 @@ import { TramitesComponent } from './tramites/tramites.component';
 import { TransparenciaComponent } from './transparencia/transparencia.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 
-import { TramitesService } from '../services/tramites.service';
+import { TramitesService } from '../services/tramites/tramites.service';
 import { HttpClientModule } from '@angular/common/http'
 
 

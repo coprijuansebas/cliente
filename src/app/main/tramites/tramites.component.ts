@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tramites',
@@ -8,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TramitesComponent implements OnInit {
 
-  constructor( private route: ActivatedRoute) { }
 
   ngOnInit() {
   }

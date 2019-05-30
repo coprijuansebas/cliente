@@ -1,0 +1,30 @@
+<!-- Tabla de No. Scian -->
+<div class="row">
+    <div class="col-md-12 table-responsive-sm">
+      <table mdbTable  striped="true" hover="true" responsive="true"> 
+        <thead class="primary-color white-text justify-center-text align-items-center">
+          <th>CLAVE SCIAN</th>
+          <th>DESCRIPCION DE LA ACTIVIDAD</th>
+          <th>AREA</th>
+          <th>ENTIDADES FEDERATIVAS</th>
+          <th>COFEPRIS</th>
+          <th>REQUIERE LICECIA</th>
+          <th>CREADO EL DIA</th>
+          <th class="text-center"><i class="fas fa-trash-alt"></i></th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tramite of tramites">
+              <td>{{tramite.scian}}</td>
+              <td>{{tramite.descripcion}}</td>
+              <td>{{tramite.area}}</td>
+              <td>{{tramite.entidadesF}}</td>
+              <td>{{tramite.cofepris}}</td>
+              <td>{{tramite.Rlicencia}}</td>
+              <td>{{tramite.creado_a | date: 'yyyy-MM-dd'}}</td>
+              <td><button class="btn btn-danger" (click)="deleteTramite(tramite.id)"><i class="fas fa-trash-alt"></i></button></td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
