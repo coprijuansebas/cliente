@@ -15,7 +15,14 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
-             <section class="container-fluid">
+             <section class="container">
+               <div class="col-md-4">
+                  <mdb-breadcrumb customClass="primary-color white-text">
+                      <mdb-breadcrumb-item><a routerLinkActive="active current" routerLink="/admin/dashboard/administracion" mdbWavesEffect>Administracion</a></mdb-breadcrumb-item>
+                      <mdb-breadcrumb-item><a routerLinkActive="active current" routerLink="/admin/dashboard/usuarios" mdbWavesEffect>Usuarios</a></mdb-breadcrumb-item>
+                      <mdb-breadcrumb-item><a routerLinkActive="active current" routerLink="/admin/dashboard/analisis" mdbWavesEffect>Analisis</a></mdb-breadcrumb-item>
+                    </mdb-breadcrumb>
+               </div>
                <router-outlet></router-outlet>
              </section>
         </div>

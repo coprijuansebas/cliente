@@ -15,7 +15,10 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 
 
 import { HttpClientModule } from '@angular/common/http'
-import { TramitesService } from '../services/tramites.service';
+import { TramitesService } from '../services/tramites/tramites.service';
+import { TablasComponent } from './dashboard/analisis/tablas/tablas.component';
+import { IngresarComponent } from './dashboard/analisis/ingresar/ingresar.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,14 +30,17 @@ import { TramitesService } from '../services/tramites.service';
     AnalisisComponent,
     AdministracionComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    TablasComponent,
+    IngresarComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     NgbModule.forRoot(),
     AdminRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [

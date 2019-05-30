@@ -7,6 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent } from './dashboard/usuarios/usuarios.component';
 import { AnalisisComponent } from './dashboard/analisis/analisis.component';
 import { AdministracionComponent } from './dashboard/administracion/administracion.component';
+import { TablasComponent } from './dashboard/analisis/tablas/tablas.component';
+import { IngresarComponent } from './dashboard/analisis/ingresar/ingresar.component';
 
 
 
@@ -19,7 +21,12 @@ const routes: Routes = [
           { path: 'dashboard', component: DashboardComponent,
             children: [
                 {path: 'usuarios', component: UsuariosComponent},
-                {path: 'analisis', component: AnalisisComponent},
+                {path: 'analisis', component: AnalisisComponent,
+                 children: [
+                     {path: '', component: TablasComponent},
+                     {path: 'tablas', component: TablasComponent},
+                     {path: 'ingresar', component: IngresarComponent},
+                 ]},
                 {path: 'administracion', component: AdministracionComponent},
             ]}
       ] }

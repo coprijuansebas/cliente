@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
-import { Tramite } from '../Models/Tramite'
+import { Tramite } from '../../Models/Tramite'
 import { Observable } from 'rxjs';
 
 

@@ -9,7 +9,7 @@ import { MainModule } from './main/main.module';
 import { AdminModule } from './admin/admin.module';
 
 import { HttpClientModule } from '@angular/common/http'
-import { TramitesService } from './services/tramites.service';
+import { TramitesService } from './services/tramites/tramites.service';
 
 
 @NgModule({

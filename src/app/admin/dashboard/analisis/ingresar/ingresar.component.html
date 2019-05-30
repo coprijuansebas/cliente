@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+          <div class="card-header bg-dark text-white d-flex justify-content-center align-items-center">
+            INGRESAR CLAVE SCIAN
+          </div>
+          <div class="card-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="scian" [(ngModel)]="tramite.scian" placeholder="Clave scian" class="form-control" autofocus>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="entidadesf" [(ngModel)]="tramite.entidadesF" placeholder="Entidades federativas" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea name="descripcion" [(ngModel)]="tramite.descripcion" placeholder="Descripcion de la actividad" rows="2" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="cofepris" [(ngModel)]="tramite.cofepris" placeholder="COFEPRIS" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="area" [(ngModel)]="tramite.area" placeholder="Area" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="rlicencia" [(ngModel)]="tramite.Rlicencia" placeholder="Requiere licencia" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-success btn-block" (click)="guardarTramite()">
+                GUARDAR
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <h3 >PRE-VIZUALIZACION</h3>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <table mdbTable class="table table-bordered" striped="true" hover="true" responsive="true">
+        <thead class="primary-color white-text">
+          <th>Clave Scian</th>
+          <th>Descripcion de la actividad</th>
+          <th>Area</th>
+          <th>Entidades federativas</th>
+          <th>Cofepris</th>
+          <th>Requiere licencia</th>
+          <th>Creado el dia</th>
+        </thead>
+        <tbody>
+          <tr>
+              <td>{{tramite.scian}}</td>
+              <td>{{tramite.descripcion == '' ? 'Escribe una descripcion' : tramite.descripcion}}</td>
+              <td>{{tramite.area == '' ? 'Escribe una area' : tramite.area}}</td>
+              <td>{{tramite.entidadesF == '' ? 'si o no' : tramite.entidadesF}}</td>
+              <td>{{tramite.cofepris == '' ? 'si o no' : tramite.cofepris}}</td>
+              <td>{{tramite.Rlicencia == '' ? 'si o no' : tramite.Rlicencia}}</td>
+              <td>{{tramite.creado_a | date: 'yyyy-MM-dd'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
