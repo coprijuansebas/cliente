@@ -136,8 +136,17 @@ hr{
 .zoom:hover{
     /* tranformamos el elemento al pasar el mouse por encima al doble de
        su tamaño con scale(2). */
-    transform : scale(2);
-    -moz-transform : scale(2);      /* Firefox */
-    -webkit-transform : scale(2);   /* Chrome - Safari */
-    -o-transform : scale(2);        /* Opera */
+    transform : scale(1.6);
+    -moz-transform : scale(1.6);      /* Firefox */
+    -webkit-transform : scale(1.6);   /* Chrome - Safari */
+    -o-transform : scale(1.6);        /* Opera */
+}
+
+.text-p{
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+}
+.table-d{
+    margin-left: 25%;
 }
