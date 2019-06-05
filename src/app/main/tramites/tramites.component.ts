@@ -11,7 +11,7 @@ export class TramitesComponent implements OnInit {
   ngOnInit() {
   }
 
-  mostrarTramite: boolean = false;
+  mostrarTramite: boolean = true;
   mostrarTramite2: boolean = false;
   mostrarTramite3: boolean = false;
   mostrar(){
