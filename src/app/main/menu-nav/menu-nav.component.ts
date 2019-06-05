@@ -14,26 +14,10 @@ export class MenuNavComponent implements OnInit {
 
   ngOnInit() {
     this.scroll();
-    this.regresar();
   }
 
   regresar(){
-    const current = this.router.url;
-    if(current === '/main/tramites'){
-
-    }
-    if(current === '/main/coordinacion'){
-      return
-    }
-    if(current === '/main/transparencia'){
-      return
-    }
-    if(current === '/main/mision'){
-      return
-    }
-    else if(current === '/main'){
-      this.router.navigate(['/main']);
-    }
+    this.router.navigate(['/main']);
   }
 
 
