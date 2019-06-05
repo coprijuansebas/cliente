@@ -1,0 +1,44 @@
+.text-principal{
+  
+    text-align: center; 
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 30px; 
+    color:  #4285F4; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+
+}
+.text-pricipald{
+    text-align: center; 
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    
+    color: #4285F4; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68,
+     2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+}
+
+.text-s{
+    font-size: 80px;
+    padding-top: 10px;
+}
+
+/* Por debajo de 700px */
+
+    @media screen and (max-width: 700px){
+        .text-principal{
+        font-size:20px;
+        }
+        .text-s{
+        font-size:22px;
+        }
+        }
+        /* Por debajo de 400px */
+        @media screen and (max-width: 400px){
+        .text-pricipal{
+        font-size:20px;
+        }
+        .text-s{
+        font-size:22px;
+        }
+        }
