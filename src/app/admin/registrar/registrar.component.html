@@ -1,0 +1,37 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="assets/imagenes/Logo COPRISED 2017 Horizontal Transparente - Copy.png" id="icon" alt="User Icon"/>
+        
+      </div>
+      <hr>
+      <!-- Registrar Form -->
+      <div class="row">
+        <div class="col-md-12 mx-auto">
+          <h2>
+            Crear nuevo usuario
+          </h2>
+        </div>
+      </div>
+      <form #myform="ngForm" (ngSubmit)="register(myform)" >
+        <input type="text" id="login" class="fadeIn first" name="nombres" placeholder="Nombres" autofocus required ngModel>
+        <input type="text" id="login" class="fadeIn second" name="apellidos" placeholder="Apellidos" required ngModel>
+        <input type="email" id="login" class="fadeIn third" name="email" placeholder="Email" required ngModel>
+        <input type="password" id="password" class="fadeIn fourth" name="password" placeholder="Contraseña" required ngModel>
+        <input type="submit" id="login-botton" class="fadeIn fifth" value="Crear Usuario">
+      </form>
+  
+      <!--  -->
+      <div id="formFooter">
+          <div class="row">
+              <div class="col-md-12">
+                  <a class="underlineHover" routerLink="/admin/Login">Salir</a>
+              </div>
+            </div>
+      </div>
+  
+    </div>
+  </div>

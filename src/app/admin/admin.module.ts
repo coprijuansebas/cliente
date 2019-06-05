@@ -19,6 +19,7 @@ import { TramitesService } from '../services/tramites/tramites.service';
 import { TablasComponent } from './dashboard/analisis/tablas/tablas.component';
 import { IngresarComponent } from './dashboard/analisis/ingresar/ingresar.component';
 import { FormsModule } from '@angular/forms';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     NavbarComponent,
     TablasComponent,
-    IngresarComponent
+    IngresarComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,

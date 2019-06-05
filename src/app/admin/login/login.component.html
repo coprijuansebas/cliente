@@ -9,15 +9,19 @@
     </div>
     <hr>
     <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario">
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
-      <input type="submit" id="login-botton" class="fadeIn fourth" value="Iniciar Sesion" routerLink="/admin/dashboard">
+    <form #myform="ngForm" (ngSubmit)="register(myform)">
+      <input type="email" id="login" class="fadeIn second" name="email" placeholder="Usuario" ngModel required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" ngModel required>
+      <input type="submit" id="login-botton" class="fadeIn fourth" value="Iniciar Sesion" ngModel required >
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Pedir ayuda </a>
+      <div class="row">
+        <div class="col-md-12">
+            <a class="underlineHover" routerLink="/admin/registrar">Registrar </a>
+        </div>
+      </div>
     </div>
 
   </div>
