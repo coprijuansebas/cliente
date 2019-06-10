@@ -25,6 +25,7 @@
       <p class="card-text">Si tiene alguna duda sobre tramites o informacion de direcciones no dudes en llamar al telefono que aparese en la imagen  </p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
       <button type="button" class="btn btn-light-blue btn-md" routerLink="/main/tramites">Tramites y servicios</button>
+      
 
     </div>
 
@@ -48,95 +49,6 @@
   </div>
 </div>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3"></script>
 
-
-<div class="fb-page col-md-12" data-href="https://www.facebook.com/coprised" data-tabs="timeline" data-width="390" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/coprised" 
-  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/coprised"></a></blockquote></div>
-  
-  
       
-      
-  <div class="container">
-      <div class="content">
-        <div class="left_sidebar">
-          <aside class="block">
-            <h3>Content</h3>
-          </aside>
-          <!-- begin Widget Facebook
-        ========================================= -->
-          <aside class="widget--facebook--container">
-            <div class="widget-facebook">
-              <iframe id="facebook_iframe" class="facebook_iframe"></iframe>
-            </div>
-          </aside>
-
-          <script>
-            function setupFBframe(frame) {
-  var container = frame.parentNode;
-
-  var containerWidth = container.offsetWidth;
-  var containerHeight = container.offsetHeight;
-
-  var src =
-    "https://www.facebook.com/coprised" +
-    "?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook" +
-    "&tabs=timeline" +
-    "&width=" +
-    containerWidth +
-    "&height=" +
-    containerHeight +
-    "&small_header=false" +
-    "&adapt_container_width=false" +
-    "&hide_cover=true" +
-    "&hide_cta=true" +
-    "&show_facepile=true" +
-    "&appId";
-
-  frame.width = containerWidth;
-  frame.height = containerHeight;
-  frame.src = src;
-}
-
-/* begin Document Ready                       				   		
-############################################ */
-
-document.addEventListener('DOMContentLoaded', function() {
-  var facebookIframe = document.querySelector('#facebook_iframe');
-  setupFBframe(facebookIframe);
- 
-  /* begin Window Resize                       				   		
-  ############################################ */
-  
-  // Why resizeThrottler? See more : https://developer.mozilla.org/ru/docs/Web/Events/resize
-  (function() {
-    window.addEventListener("resize", resizeThrottler, false);
-
-    var resizeTimeout;
-
-    function resizeThrottler() {
-      if (!resizeTimeout) {
-        resizeTimeout = setTimeout(function() {
-          resizeTimeout = null;
-          actualResizeHandler();
-        }, 66);
-      }
-    }
-
-    function actualResizeHandler() {
-      document.querySelector('#facebook_iframe').removeAttribute('src');
-      setupFBframe(facebookIframe);
-    }
-  })();
-  /* end Window Resize
-  ############################################ */
-});
-/* end Document Ready                       				   		
-############################################ */
-          </script>
-      
-   
-  
-  
-  
+    
