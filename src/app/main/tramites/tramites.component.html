@@ -28,6 +28,7 @@
     <links>
       <ul class="navbar-nav">
         <li class="nav-item active">
+<<<<<<< HEAD
           <a class="nav-link " (click)="mostrar()" mdbTooltip="Para dar de alta tramites de productos y servicios" mdbWavesEffect>ALTAS DE NEGOCIOS <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -35,19 +36,26 @@
         </li>
         <li class="nav-item">
           <a class="nav-link " (click)="mostrar3()" mdbWavesEffect>COFEPRIS-05-036</a>
+=======
+          <a class="nav-link scroll" (click)="mostrar()" href="#tramite1" mdbTooltip="Para dar de alta tramites de productos y servicios" mdbWavesEffect> <strong>ALTAS DE NEGOCIOS</strong> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll" (click)="mostrar2()" href="#tramite2" mdbWavesEffect> <strong>BAJA O MODIFICACION DE NEGOCIO</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll" (click)="mostrar3()" href="#tramite3" mdbWavesEffect> <strong>ALTA DE CONSULTORIOS</strong></a>
+>>>>>>> 2951b75188248bfd88203a1e23a71ce3cc864981
         </li>
       </ul>
     </links>
   </mdb-navbar>
 </div>
 <br>
+
+
 <div>
-
-
-
-
   <!-- aqui empieza informcion genral de texto-->
-  <mdb-card class="size" *ngIf="mostrarTramite">
+  <mdb-card class="size" *ngIf="mostrarTramite" id="tramite1">
     <mdb-card-body class="text-c">
       <strong> <u>DOCUMENTOS REQUERIDOS PARA FORMATO </u> </strong><br>
       <strong> <u>COFEPRIS-05-018</u> <br>(Aviso de funcionamiento del establecimiento de Productos Y Servicios)</strong>
@@ -370,7 +378,7 @@
 
 <div>
   <!-- aqui empieza informcion genral de texto-->
-  <mdb-card class="size" *ngIf="mostrarTramite2">
+  <mdb-card class="size" *ngIf="mostrarTramite2" id="tramite2">
     <mdb-card-body class="text-c">
       <strong> <u>DOCUMENTOS REQUERIDOS PARA FORMATO </u> </strong><br>
       <strong> <u>COFEPRIS-05-019</u> <br>(Aviso de Modificacion  al Aviso de Funcionamiento o Baja de Establecimiento de Productos Y Servicios)</strong>
@@ -743,7 +751,7 @@
 
 <div>
   <!-- aqui empieza informcion genral de texto 036-->
-  <mdb-card class="size" *ngIf="mostrarTramite3">
+  <mdb-card class="size" *ngIf="mostrarTramite3" id="tramite3">
     <mdb-card-body class="text-c">
       <strong> <u>DOCUMENTOS REQUERIDOS PARA FORMATO </u> </strong><br>
       <strong> <u>COFEPRIS-05-036</u> <br>(Aviso de Funcionamiento y de Responsable Sanitario de el Establecimiento de Servicios de Salud)</strong>
