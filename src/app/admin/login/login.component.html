@@ -9,10 +9,10 @@
     </div>
     <hr>
     <!-- Login Form -->
-    <form #myform="ngForm" (ngSubmit)="register(myform)">
-      <input type="email" id="login" class="fadeIn second" name="email" placeholder="Usuario" ngModel required>
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" ngModel required>
-      <input type="submit" id="login-botton" class="fadeIn fourth" value="Iniciar Sesion" ngModel required >
+    <form #myform="ngForm" (ngSubmit)="loginUser()">
+      <input type="email" [(ngModel)]="user.email" id="login" class="fadeIn second" name="email" placeholder="Usuario" required>
+      <input type="password" [(ngModel)]="user.password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" required>
+      <input type="submit" id="login-botton" class="fadeIn fourth" value="Iniciar Sesion" required >
     </form>
 
     <!-- Remind Passowrd -->

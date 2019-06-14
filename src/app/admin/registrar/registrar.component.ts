@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { User } from 'src/app/Models/Users';
+import { Router } from '@angular/router';
+
+import { RegistrarService } from '../../services/registrar/registrar.service';
+
 @Component({
   selector: 'app-registrar',
   templateUrl: './registrar.component.html',
@@ -7,12 +12,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarComponent implements OnInit {
 
-  constructor() { }
+  user: User = {
+    id: 0,
+    nombres: '',
+    apellidos: '',
+    email: '',
+    password: '',
+    created_at: new Date()
+  };
+
+  constructor(private registrarServices: RegistrarService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  register(form){
-    console.log(form.value);
+
+  saveUser(){
+    delete this.user.id;
+    delete this.user.created_at;
+
+    this.registrarServices.saveUser(this.user).subscribe(
+      res => {
+        console.log(res);
+        this.router.navigate(['/admin/dashboard']);
+      },
+      err => {console.error(err)}
+    );
+
   }
 }
