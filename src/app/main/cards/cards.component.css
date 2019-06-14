@@ -6,3 +6,43 @@
     margin-bottom: 0px;
 }
 */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+body {
+  font-family: 'Indie Flower', cursive;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content {
+  overflow: hidden;
+}
+
+.left_sidebar {
+  position: relative;
+  float: left;
+  width: 30%;
+  max-width: 300px;
+}
+
+.main_content {
+  position: relative;
+  float: left;
+  width: 70%;
+  background-color: #DDEFF7;
+}
+/* ------- begin Widget Facebook -------------- */
+.widget--facebook--container {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.widget-facebook {
+  height: 500px;
+}
+
+.widget-facebook .facebook_iframe {
+  border: none;
+}
