@@ -21,37 +21,37 @@
 
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Ejecutar Acción al Cerrar Modal</h4>
-        </div>
-        <div class="modal-body">
-          <p>Probaremos como ejecutar una accion al detectar el cierre del modal</p>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ejecutar Acción al Cerrar Modal</h4>
       </div>
-      <button type="button" class="btn btn-info btn-md" id="myBtn">Ocultar Modal</button>
+      <div class="modal-body">
+        <p>Probaremos como ejecutar una accion al detectar el cierre del modal</p>
+      </div>
     </div>
+    <button type="button" class="btn btn-info btn-md" id="myBtn">Ocultar Modal</button>
   </div>
+</div>
 
 
-  <script>
-  
-  $(document).ready(function(){
-    
+<script>
+
+  $(document).ready(function () {
+
     $("#myModal").modal("show");
-    
-    
-    $("#myBtn").click(function(){
-        $("#myModal").modal("hide");
+
+
+    $("#myBtn").click(function () {
+      $("#myModal").modal("hide");
     });
     $("#myModal").on('hidden.bs.modal', function () {
-            alert("Esta accion se ejecuta al cerrar el modal")
+      alert("Esta accion se ejecuta al cerrar el modal")
     });
 
-});
-  </script>
+  });
+</script>

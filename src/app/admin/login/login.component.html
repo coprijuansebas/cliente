@@ -4,22 +4,24 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="assets/imagenes/Logo COPRISED 2017 Horizontal Transparente - Copy.png" id="icon" alt="User Icon"/>
-      
+      <img src="assets/imagenes/Logo COPRISED 2017 Horizontal Transparente - Copy.png" id="icon" alt="User Icon" />
+
     </div>
     <hr>
     <!-- Login Form -->
     <form #myform="ngForm" (ngSubmit)="loginUser()">
-      <input type="email" [(ngModel)]="user.email" id="login" class="fadeIn second" name="email" placeholder="Usuario" required>
-      <input type="password" [(ngModel)]="user.password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" required>
-      <input type="submit" id="login-botton" class="fadeIn fourth" value="Iniciar Sesion" required >
+      <input type="email" [(ngModel)]="user.email" id="login" class="fadeIn second" name="email" placeholder="Usuario"
+        required>
+      <input type="password" [(ngModel)]="user.password" id="password" class="fadeIn third" name="password"
+        placeholder="Contraseña" required>
+      <input type="submit" id="login-botton" class="fadeIn fourth" value="Iniciar Sesion" required>
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <div class="row">
         <div class="col-md-12">
-            <a class="underlineHover" routerLink="/admin/registrar">Registrar </a>
+          <a class="underlineHover" routerLink="/admin/registrar">Registrar </a>
         </div>
       </div>
     </div>
