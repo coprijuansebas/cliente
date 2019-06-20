@@ -14,12 +14,16 @@ import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { TramitesService } from '../services/tramites/tramites.service';
 import { TablasComponent } from './dashboard/analisis/tablas/tablas.component';
 import { IngresarComponent } from './dashboard/analisis/ingresar/ingresar.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from '../services/token/token-interceptor.service';
+
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -42,11 +46,18 @@ import { RegistrarComponent } from './registrar/registrar.component';
     NgbModule.forRoot(),
     AdminRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
-    TramitesService
+    TramitesService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AdminComponent]
 })

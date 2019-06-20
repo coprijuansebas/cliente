@@ -10,6 +10,7 @@ import { AdminModule } from './admin/admin.module';
 
 import { HttpClientModule } from '@angular/common/http'
 import { TramitesService } from './services/tramites/tramites.service';
+import { AuthGuard } from './admin/auth.guard';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TramitesService } from './services/tramites/tramites.service';
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
-    TramitesService
+    TramitesService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

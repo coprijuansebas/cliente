@@ -1,33 +1,41 @@
-<div id="wrapper">
-
-  <!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li><a routerLinkActive="active current" routerLink="/admin/dashboard/administracion" mdbWavesEffect>Administracion</a></li>
-      <li><a routerLinkActive="active current" routerLink="/admin/dashboard/usuarios" mdbWavesEffect>Usuarios</a></li>
-      <li><a routerLinkActive="active current" routerLink="/admin/dashboard/analisis" mdbWavesEffect>Analisis</a></li>
-      <hr>
-    </ul>  
-  </div>
-
-  <!-- Page content -->
-  <div id="page-content-wrapper">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-             <section class="container">
-               <div class="col-md-4">
-                  <mdb-breadcrumb customClass="primary-color white-text">
-                      <mdb-breadcrumb-item><a routerLinkActive="active current" routerLink="/admin/dashboard/administracion" mdbWavesEffect>Administracion</a></mdb-breadcrumb-item>
-                      <mdb-breadcrumb-item><a routerLinkActive="active current" routerLink="/admin/dashboard/usuarios" mdbWavesEffect>Usuarios</a></mdb-breadcrumb-item>
-                      <mdb-breadcrumb-item><a routerLinkActive="active current" routerLink="/admin/dashboard/analisis" mdbWavesEffect>Analisis</a></mdb-breadcrumb-item>
-                    </mdb-breadcrumb>
-               </div>
-               <router-outlet></router-outlet>
-             </section>
+<!-- Page content -->
+<div class="container-fluid">
+  <div class="row mt-3">
+    <div class="col-lg-12">
+      <section class="container">
+        <div class="row mb-4" *ngIf="mostrar">
+          <!-- ADMINISTRACION -->
+          <div class="col-md-4">
+            <a routerLink="/admin/dashboard/administracion">
+              <div class="card primary-color">
+                <div class="card-body">
+                  <h3 class="text-center"><i class="fas fa-images"></i><strong> Administracion</strong></h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- USUARIOS -->
+          <div class="col-md-4">
+            <a routerLink="/admin/dashboard/usuarios">
+              <div class="card primary-color">
+                <div class="card-body">
+                  <h3 class="text-center"><i class="fas fa-users"></i> <strong> Usuarios</strong></h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a routerLink="/admin/dashboard/analisis">
+              <div class="card primary-color">
+                <div class="card-body">
+                  <h3 class="text-center"> <i class="fas fa-chart-pie"></i> <strong> Analisis</strong> </h3>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
+        <router-outlet></router-outlet>
+      </section>
     </div>
   </div>
-
 </div>

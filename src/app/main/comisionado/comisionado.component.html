@@ -8,8 +8,8 @@
           <div class="col-md-4 offset-md-1 mx-3 my-3">
       
             <!-- Featured image -->
-            <div class="view overlay waves-light" mdbWavesEffect>
-              <img src="assets\imagenes\crescencioweb1.png" class="img-fluid wow fadeInUp" data-wow-delay="0.5s" 
+            <div class="view overlay waves-light" mdbWavesEffect *ngFor="let img of imagenes; let i = index">
+              <img src="assets\imagenes\{{img.image}}" class="img-fluid wow fadeInUp" data-wow-delay="0.5s" 
               alt="Sample image for first version of blog listing">
               <a>
                 <div class="mask rgba-white-slight"></div>

@@ -16,11 +16,11 @@
           </h2>
         </div>
       </div>
-      <form #myform="ngForm" (ngSubmit)="register(myform)" >
-        <input type="text" id="login" class="fadeIn first" name="nombres" placeholder="Nombres" autofocus required ngModel>
-        <input type="text" id="login" class="fadeIn second" name="apellidos" placeholder="Apellidos" required ngModel>
-        <input type="email" id="login" class="fadeIn third" name="email" placeholder="Email" required ngModel>
-        <input type="password" id="password" class="fadeIn fourth" name="password" placeholder="Contraseña" required ngModel>
+      <form #myform="ngForm" (ngSubmit)="saveUser()" >
+        <input type="text" id="login" class="fadeIn first" name="nombres" [(ngModel)]="user.nombres" placeholder="Nombres" autofocus required>
+        <input type="text" id="login" class="fadeIn second" name="apellidos" [(ngModel)]="user.apellidos" placeholder="Apellidos" required>
+        <input type="email" id="login" class="fadeIn third" name="email" [(ngModel)]="user.email" placeholder="Email" required>
+        <input type="password" id="password" class="fadeIn fourth" name="password" [(ngModel)]="user.password" placeholder="Contraseña" required>
         <input type="submit" id="login-botton" class="fadeIn fifth" value="Crear Usuario">
       </form>
   

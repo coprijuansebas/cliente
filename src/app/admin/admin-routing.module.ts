@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { AdminComponent } from './admin.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,6 +11,7 @@ import { AdministracionComponent } from './dashboard/administracion/administraci
 import { TablasComponent } from './dashboard/analisis/tablas/tablas.component';
 import { IngresarComponent } from './dashboard/analisis/ingresar/ingresar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -30,7 +32,8 @@ const routes: Routes = [
                      {path: 'ingresar', component: IngresarComponent},
                  ]},
                 {path: 'administracion', component: AdministracionComponent},
-            ]}
+            ],
+            canActivate: [AuthGuard] }
       ] }
 ]
 

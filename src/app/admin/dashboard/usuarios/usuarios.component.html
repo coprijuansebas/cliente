@@ -1,3 +1,25 @@
-<p>
-  usuarios works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let user of usuarios">
+      <div class="card mb-2">
+        <div class="card-header info-color-dark text-white d-flex justify-content-center align-items-center">
+          <h3>
+            <mdb-icon fas icon="user-circle"></mdb-icon> {{user.apellidos | uppercase}}
+          </h3>
+        </div>
+        <div class="card-body">
+          <h5>Nombres: </h5>
+          <p>{{user.nombres | uppercase}} {{user.apellidos | uppercase}}</p>
+          <hr>
+          <h5>Email: </h5>
+          <p>{{user.email}}</p>
+        </div>
+        <div class="card-footer info-color-dark text-center text-white">
+          <p>{{user.created_at | date: 'yyyy-MM-dd'}}</p>
+          <hr>
+          <button class="btn btn-danger btn-block" (click)="deleteUser(user.id)"><i class="fas fa-trash-alt"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

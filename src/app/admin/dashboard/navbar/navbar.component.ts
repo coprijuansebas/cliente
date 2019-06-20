@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +10,7 @@ import * as $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     //-- Toggle menu script--
@@ -16,6 +18,11 @@ export class NavbarComponent implements OnInit {
       e.preventDefault();
       $("#wrapper").toggleClass("menuDisplayed");
     });
+  }
+
+  logOut(){
+    localStorage.removeItem('token');
+    this.router.navigate(['/admin'])
   }
 
 }

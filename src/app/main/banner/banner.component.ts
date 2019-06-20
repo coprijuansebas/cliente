@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ImagesService } from '../../services/images/images.service'
+
+
 
 @Component({
   selector: 'app-banner',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: ImagesService) { }
+
+  imagenes: any = [];
+
 
   ngOnInit() {
+    this.getImagenes();
+  }
+
+  getImagenes(){
+    this.service.getImagesb().subscribe(
+      res => {
+        this.imagenes = res;
+      },
+      err => console.error(err),
+    );
   }
 
 }
