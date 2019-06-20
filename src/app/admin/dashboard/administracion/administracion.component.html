@@ -1,99 +1,143 @@
 <div class="container">
   <!-- CARROUSEL -->
-<h3>CAROUSEL</h3>
-<hr>
-<form>
-    <!-- Grid row -->
-    <div class="form-row align-items-center">
-      <!-- Grid column -->
-      <div class="col-auto">
-        <!-- Material input -->
-        <div class="md-form">
-            <mdb-icon far icon="images"></mdb-icon>
-            <input mdbInput type="file" id="form2" class="form-control">
+  <h3>CAROUSEL</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row card">
+        <div class="col-md-12">
+          <div id="fileSelector">
+            <input type="file" name="fileUpload" id="fileUpload" multiple ng2FileSelect [uploader]="uploader">
+          </div>
+          <div>
+            <div class="row updloadList mt-4" *ngFor="let item of uploader.queue">
+              <div class="col-sm-4" id="filename">{{item.file.name}}</div>
+              <div class="col-sm-4">
+                <div class="progress">
+                  <div class="progress-bar bg-success" [ngStyle]="{'width':item.progress+'%'}"></div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" (click)="item.upload()">Upload</button>
+                <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+              </div>
+            </div>
+            <div class="row" *ngIf="uploader?.queue?.length > 0">
+              <button type="button" class="btn btn-primary mt-2 mb-3" (click)="uploader.uploadAll()">Upload all</button>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Grid column -->
-  
-      <!-- Grid column -->
-      <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-0">Modificar</button>
-        </div>
-      <!-- Grid column -->
-  
-      <!-- Grid column -->
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-0">Eliminar</button>
-      </div>
-      <!-- Grid column -->
     </div>
-    <!-- Grid row -->
-  </form>
-  <!-- Material auto-sizing form -->
-<br>
-<!-- BANNER -->
-<h3>BANNER</h3>
-<hr>
-<form>
-    <!-- Grid row -->
-    <div class="form-row align-items-center">
-      <!-- Grid column -->
-      <div class="col-auto">
-        <!-- Material input -->
-        <div class="md-form">
-            <mdb-icon fas icon="image"></mdb-icon>
-            <input mdbInput type="text" id="form2" class="form-control">
-            <label for="form2">Texto aqui</label>
+  </div>
+  <br>
+  <!-- MOSTRAR IMAGENES DENTRO DEL SILDER -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let img of imagenes">
+      <div class="card mb-2">
+        <div class="card-header info-color-dark text-white d-flex justify-content-center align-items-center">
+          {{img.image}}
+        </div>
+        <div class="card-body">
+          <img src="assets\imagenes\{{img.image}}" class="card-img-top" alt="">
+        </div>
+        <div class="card-footer info-color-dark text-center text-white">
+          <button class="btn btn-danger btn-block" (click)="deleteImage(img.id)"><i
+              class="fas fa-trash-alt"></i></button>
         </div>
       </div>
-      <!-- Grid column -->
-  
-      <!-- Grid column -->
-      <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-0">Modificar</button>
-        </div>
-      <!-- Grid column -->
-  
-      <!-- Grid column -->
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-0">Eliminar</button>
-      </div>
-      <!-- Grid column -->
     </div>
-    <!-- Grid row -->
-  </form>
-  <!-- Material auto-sizing form -->
-<br>
-<!-- CARDS -->
-<h3>CARDS</h3>
-<hr>
-<form>
-    <!-- Grid row -->
-    <div class="form-row align-items-center">
-      <!-- Grid column -->
-      <div class="col-auto">
-        <!-- Material input -->
-        <div class="md-form">
-            <mdb-icon fas icon="address-card"></mdb-icon>
-            <input mdbInput type="text" id="form2" class="form-control">
-            <label for="form2">Texto aqui</label>
+  </div>
+  <br>
+  <!-- BANNER -->
+  <h3>BANNER</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row card">
+        <div class="col-md-12">
+          <div id="fileSelector">
+            <input type="file" name="fileUpload" id="fileUpload" multiple ng2FileSelect [uploader]="uploaderb">
+          </div>
+          <div>
+            <div class="row updloadList mt-4" *ngFor="let item of uploaderb.queue">
+              <div class="col-sm-4" id="filename">{{item.file.name}}</div>
+              <div class="col-sm-4">
+                <div class="progress">
+                  <div class="progress-bar bg-success" [ngStyle]="{'width':item.progress+'%'}"></div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" (click)="item.upload()">Upload</button>
+                <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+              </div>
+            </div>
+            <div class="row" *ngIf="uploaderb?.queue?.length > 0">
+              <button type="button" class="btn btn-primary mt-2 mb-3" (click)="uploaderb.uploadAll()">Upload all</button>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Grid column -->
-  
-      <!-- Grid column -->
-      <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-0">Modificar</button>
-        </div>
-      <!-- Grid column -->
-  
-      <!-- Grid column -->
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-0">Eliminar</button>
-      </div>
-      <!-- Grid column -->
     </div>
-    <!-- Grid row -->
-  </form>
-  <!-- Material auto-sizing form -->
+  </div>
+  <br>
+  <!-- MOSTRAR IMAGEN ACTUAL EN BANNER -->
+  <div class="row">
+      <div class="col-md-4" *ngFor="let img of imagenesb">
+        <div class="card mb-2">
+          <div class="card-header info-color-dark text-white d-flex justify-content-center align-items-center">
+            {{img.image}}
+          </div>
+          <div class="card-body">
+            <img src="assets\imagenes\{{img.image}}" class="card-img-top" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  <br>
+  <!-- CARDS -->
+  <h3>CONOCENOS</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row card">
+        <div class="col-md-12">
+          <div id="fileSelector">
+            <input type="file" name="fileUpload" id="fileUpload" multiple ng2FileSelect [uploader]="uploaderc">
+          </div>
+          <div>
+            <div class="row updloadList mt-4" *ngFor="let item of uploaderc.queue">
+              <div class="col-sm-4" id="filename">{{item.file.name}}</div>
+              <div class="col-sm-4">
+                <div class="progress">
+                  <div class="progress-bar bg-success" [ngStyle]="{'width':item.progress+'%'}"></div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" (click)="item.upload()">Upload</button>
+                <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+              </div>
+            </div>
+            <div class="row" *ngIf="uploaderc?.queue?.length > 0">
+              <button type="button" class="btn btn-primary mt-2 mb-3" (click)="uploaderc.uploadAll()">Upload all</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- MOSTRAR IMAGEN ACTUAL EN CONOCENOS -->
+  <div class="row">
+      <div class="col-md-4" *ngFor="let img of imagenesc">
+        <div class="card mb-2">
+          <div class="card-header info-color-dark text-white d-flex justify-content-center align-items-center">
+            {{img.image}}
+          </div>
+          <div class="card-body">
+            <img src="assets\imagenes\{{img.image}}" class="card-img-top" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

@@ -10,7 +10,7 @@ export class UsuariosComponent implements OnInit {
 
   constructor(private service: RegistrarService) { }
 
-  @HostBinding('class') classes = 'row';
+  // @HostBinding('class') classes = 'row';
 
   usuarios: any = [];
 
@@ -25,6 +25,16 @@ export class UsuariosComponent implements OnInit {
       },
       err => console.log(err)
     );
+  }
+
+  deleteUser(id: string){
+    this.service.deleteUser(id).subscribe(
+      res => {
+        console.log(res);
+        this.getUsers();
+      },
+      err => console.error(err)
+    )
   }
 
 }

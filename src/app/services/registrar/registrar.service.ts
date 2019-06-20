@@ -12,32 +12,40 @@ export class RegistrarService {
 
   constructor(private http: HttpClient) { }
 
-  //Trae todos los tramites de la base de datos
+  //Trae todos los usuarios de la base de datos
   getUsers(){
     return this.http.get(`${this.API_URI}/registrar`);
   }
 
-  //Trae un tramite de la base de datos
+  //Trae un usuario de la base de datos
   getUser(id: string) {
     return this.http.get(`${this.API_URI}/registrar/${id}`);
   }
 
-  //Borra un tramite de la base de datos usando REST APIs
+  //Borra un usuario de la base de datos usando REST APIs
   deleteUser(id: string) {
     return this.http.delete(`${this.API_URI}/registrar/${id}`);
   }
 
-  //Guarda un tramite en la base de datos
+  //Guarda un usuario en la base de datos
   saveUser(user: User) {
     return this.http.post(`${this.API_URI}/registrar`, user);
   }
 
-  //Actualiza la informacion de un tramite en la base de datos
+  //Actualiza la informacion de un usuario en la base de datos
   updateUser(id: string|number, updatedUser: User): Observable<User> {
     return this.http.put(`${this.API_URI}/registrar/${id}`, updatedUser);
   }
 
   loginUser(user: User) {
     return this.http.post(`${this.API_URI}/login`, user);
+  }
+
+  loggedIn(){
+    return !!localStorage.getItem('token');
+  }
+
+  getToken(){
+    return localStorage.getItem('token');
   }
 }

@@ -4,6 +4,7 @@ import { User } from 'src/app/Models/Users';
 import { Router } from '@angular/router';
 
 import { RegistrarService } from '../../services/registrar/registrar.service';
+import { HttpBackend, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-registrar',
@@ -27,17 +28,24 @@ export class RegistrarComponent implements OnInit {
   }
 
 
-  saveUser(){
+  saveUser() {
     delete this.user.id;
     delete this.user.created_at;
 
     this.registrarServices.saveUser(this.user).subscribe(
-      res => {
-        console.log(res);
+      (res: any) => {
+        console.log(res)
+        localStorage.setItem('token', res.token)
         this.router.navigate(['/admin/dashboard']);
       },
-      err => {console.error(err)}
+      err => {
+        if (err instanceof HttpErrorResponse) {
+          if (err.status === 401){
+            this.router.navigate(['/admin']);
+          }
+        }
+        console.error(err)
+      }
     );
-
   }
 }

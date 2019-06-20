@@ -8,9 +8,12 @@ import * as $ from 'jquery';
 })
 export class SidebarComponent implements OnInit {
 
+  mostrar: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

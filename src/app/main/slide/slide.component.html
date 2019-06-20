@@ -1,13 +1,9 @@
-<div mdbScrollSpyElement="scrollspy1" id="home" >
-<mdb-carousel [animation]="'slide'">
-  <mdb-carousel-item>
-    <img class="d-block w-100" src="\assets\imagenes\Logo COPRISED 2017 Horizontal.png" alt="First slide">
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img class="d-block w-100" src="\assets\imagenes\Logo COPRISED 2017 Horizontal.png" alt="Second slide">
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img class="d-block w-100" src="\assets\imagenes\Logo COPRISED 2017 Horizontal.png" alt="Third slide">
-  </mdb-carousel-item>
-</mdb-carousel>
+<div mdbScrollSpyElement="scrollspy1" id="home">
+  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item *ngFor="let img of imagenes; let i = index">
+      <!-- Imagenes del servidor con http links -->
+      <img class="d-block w-100 imagen img-fluid"
+        src="assets\imagenes\{{img.image}}" alt="All slides">
+    </mdb-carousel-item>
+  </mdb-carousel>
 </div>

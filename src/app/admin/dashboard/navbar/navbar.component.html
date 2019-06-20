@@ -3,9 +3,6 @@
 
   <!-- Navbar brand -->
   <mdb-navbar-brand>
-    <a href="#" id="menu-toggle">
-      <mdb-icon fas icon="bars" size="lg"></mdb-icon>
-    </a>
     <a class="logo navbar-brand scroll">
       <img src="assets\imagenes\Logo COPRISED 2017 Horizontal Transparente - Copy.png" height="30" alt="">
     </a>
@@ -17,16 +14,7 @@
 
     <!-- Links -->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link waves-light " mdbWavesEffect>
-          <mdb-icon fas icon="envelope"></mdb-icon> Contact<span class="sr-only ">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>
-          <mdb-icon fas icon="cog"></mdb-icon> Settings
-        </a>
-      </li>
+       
 
       <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
@@ -34,8 +22,8 @@
           <mdb-icon fas icon="user-circle"></mdb-icon> Profile <span class="caret "></span>
         </a>
         <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/admin">Log out</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/admin/dashboard/usuarios">My account</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="logOut()">Log out</a>
         </div>
       </li>
 
