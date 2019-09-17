@@ -1,48 +1,59 @@
 <!-- News jumbotron -->
 <div class="jumbotron text-center hoverable p-4">
 
-        <!-- Grid row -->
-        <div class="row">
-      
-          <!-- Grid column -->
-          <div class="col-md-4 offset-md-1 mx-3 my-3">
-      
-            <!-- Featured image -->
-            <div class="view overlay waves-light" mdbWavesEffect *ngFor="let img of imagenes; let i = index">
-              <img src="assets\imagenes\{{img.image}}" class="img-fluid wow fadeInUp" data-wow-delay="0.5s" 
-              alt="Sample image for first version of blog listing">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-          </div>
-          <!-- Grid column -->
-      
-          <!-- Grid column -->
-          <div class="col-md-7 text-md-left ml-3 mt-3">
-      
-            <!-- Excerpt -->
-            <a class="blue-text">
-              <h5 class="h5 pb-1 wow fadeInUp" data-wow-delay="0.5s"><mdb-icon far icon="user-circle pb-1"></mdb-icon> Comisionado estatal</h5>
-              <h6 class="h6 pb-1 wow fadeInUp" data-wow-delay="0.5s"><i class=""></i>Dr. Cresencio Beltran Beltran</h6>
-            </a>
-            
-      
-            <h1 class="h1 mb-4 wow fadeInUp" data-wow-delay="0.5s"> <strong>Conocenos</strong></h1>
-      
-            <p class="font-weight-normal wow fadeInUp text-justify" data-wow-delay="0.5s">En la COPRISED trabajamos personas que servimos con agrado, 
-                    nuestra función es una parte fundamental para cuidar la salud de los tamaulipecos; 
-                    estamos a la orden de todos los usuarios y siempre con la disposición de solucionar 
-                    las nescesidades.</p>
-      
-            <a mdbBtn color="primary" class="wow fadeInUp" data-wow-delay="0.5s" routerLink="/main/mision" mdbWavesEffect>Mision y Vision</a>
-      
-          </div>
-          <!-- Grid column -->
-      
-        </div>
-        <!-- Grid row -->
-      
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+      <!-- Featured image -->
+      <div class="view overlay waves-light" mdbWavesEffect *ngFor="let img of imagenes; let i = index">
+        <img src="assets\imagenes\{{img.image}}" class="img-fluid wow fadeInUp" data-wow-delay="0.5s"
+          alt="Sample image for first version of blog listing">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
       </div>
-      <!-- News jumbotron -->
+      <!-- <div class="view overlay waves-light" mdbWavesEffect> -->
+      <!-- <img src="\assets\imagenes\crescencioweb1.png" class="img-fluid wow fadeInUp" data-wow-delay="0.5s" -->
+      <!-- alt="Sample image for first version of blog listing"> -->
+      <!-- <a> -->
+      <!-- <div class="mask rgba-white-slight"></div> -->
+      <!-- </a> -->
+      <!-- </div> -->
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+      <!-- Excerpt -->
+      <a class="blue-text">
+        <h5 class="h5 pb-1 wow fadeInUp" data-wow-delay="0.5s">
+          <mdb-icon far icon="user-circle pb-1"></mdb-icon> Comisionado estatal
+        </h5>
+        <h6 class="h6 pb-1 wow fadeInUp" data-wow-delay="0.5s"><i class=""></i>Dr. Cresencio Beltran Beltran</h6>
+      </a>
+
+
+      <h1 class="h1 mb-4 wow fadeInUp" data-wow-delay="0.5s"> <strong>Conocenos</strong></h1>
+
+      <p class="font-weight-normal wow fadeInUp text-justify" data-wow-delay="0.5s">En la COPRISED trabajamos personas
+        que servimos con agrado,
+        nuestra función es una parte fundamental para cuidar la salud de los tamaulipecos;
+        estamos a la orden de todos los usuarios y siempre con la disposición de solucionar
+        las nescesidades.</p>
+
+      <a mdbBtn color="primary" class="wow fadeInUp" data-wow-delay="0.5s" routerLink="/main/mision"
+        mdbWavesEffect>Mision y Vision</a>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+</div>
+<!-- News jumbotron -->

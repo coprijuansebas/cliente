@@ -1,9 +1,8 @@
 <div mdbScrollSpyElement="scrollspy1" id="home">
   <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-    <mdb-carousel-item *ngFor="let img of imagenes; let i = index">
-      <!-- Imagenes del servidor con http links -->
-      <img class="d-block w-100 imagen img-fluid"
-        src="assets\imagenes\{{img.image}}" alt="All slides">
-    </mdb-carousel-item>
+    <mdb-carousel-item *ngFor="let img of imagenes; let i = index"> 
+    <!-- Imagenes del servidor con http links -->
+    <img src="assets\imagenes\{{img.image}}" alt="All slides">
+    </mdb-carousel-item> 
   </mdb-carousel>
 </div>
